@@ -1,0 +1,31 @@
+*** Settings ***
+Library           Selenium2Library
+
+
+*** Variables ***
+${BROWSER}          firefox
+${DELAY}            1
+
+${MainUrl}  		http://www.jamk.fi/fi/Etusivu/
+
+${SearchText}  		kielikokeet
+
+*** Keywords ***
+Open website
+	Open Browser  ${MainUrl}  ${BROWSER}
+    Set Selenium Speed  ${Delay}
+
+Input search text
+	Input Text  xpath=//*[@id="Content_MainMenu_SearchPanel"]/div/input[1]  ${SearchText}
+
+Click search
+	Click element  xpath=//*[@id="Content_MainMenu_SearchPanel"]/div/a
+
+Click first link
+	Click element  xpath=//*[@id="Content_Content_UpdatePanel1"]/div[1]/div/div/div/h3/a
+
+Click pelikurssi
+	Click element  xpath=//*[@id="Content_Content_ctl00_SubMenuControl_MenuItemRepeater_ctl00_2_MenuItemRepeater_2_link_0"]
+
+Close page
+	Close Browser

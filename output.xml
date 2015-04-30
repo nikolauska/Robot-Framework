@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150430 04:31:44.387" generator="Robot 2.9.dev20150202 (Python 2.7.6 on linux2)">
+<suite source="/home/administrator/nikotest/journey.rst" id="s1" name="Journey">
+<kw type="setup" name="resource.Open website">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${MainUrl}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150430 04:31:45.409" level="INFO">Opening browser 'firefox' to base url 'http://www.jamk.fi/fi/Etusivu/'</msg>
+<status status="PASS" endtime="20150430 04:31:57.962" starttime="20150430 04:31:45.408"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20150430 04:31:57.964" starttime="20150430 04:31:57.963"></status>
+</kw>
+<status status="PASS" endtime="20150430 04:31:57.964" starttime="20150430 04:31:45.408"></status>
+</kw>
+<test id="s1-t1" name="Open search">
+<kw type="kw" name="resource.Open website">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${MainUrl}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150430 04:31:57.968" level="INFO">Opening browser 'firefox' to base url 'http://www.jamk.fi/fi/Etusivu/'</msg>
+<status status="PASS" endtime="20150430 04:32:32.592" starttime="20150430 04:31:57.968"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20150430 04:32:32.643" starttime="20150430 04:32:32.636"></status>
+</kw>
+<status status="PASS" endtime="20150430 04:32:32.645" starttime="20150430 04:31:57.967"></status>
+</kw>
+<kw type="kw" name="resource.Input search text">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="Content_MainMenu_SearchPanel"]/div/input[1]</arg>
+<arg>${SearchText}</arg>
+</arguments>
+<msg timestamp="20150430 04:32:32.659" level="INFO">Typing text 'kielikokeet' into text field 'xpath=//*[@id="Content_MainMenu_SearchPanel"]/div/input[1]'</msg>
+<status status="PASS" endtime="20150430 04:32:36.249" starttime="20150430 04:32:32.658"></status>
+</kw>
+<status status="PASS" endtime="20150430 04:32:36.250" starttime="20150430 04:32:32.646"></status>
+</kw>
+<kw type="kw" name="resource.Click search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="Content_MainMenu_SearchPanel"]/div/a</arg>
+</arguments>
+<msg timestamp="20150430 04:32:36.252" level="INFO">Clicking element 'xpath=//*[@id="Content_MainMenu_SearchPanel"]/div/a'.</msg>
+<status status="PASS" endtime="20150430 04:32:41.055" starttime="20150430 04:32:36.252"></status>
+</kw>
+<status status="PASS" endtime="20150430 04:32:41.056" starttime="20150430 04:32:36.250"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150430 04:32:41.056" critical="yes" starttime="20150430 04:31:57.964"></status>
+</test>
+<test id="s1-t2" name="Select link">
+<kw type="kw" name="resource.Click first link">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="Content_Content_UpdatePanel1"]/div[1]/div/div/div/h3/a</arg>
+</arguments>
+<msg timestamp="20150430 04:32:41.059" level="INFO">Clicking element 'xpath=//*[@id="Content_Content_UpdatePanel1"]/div[1]/div/div/div/h3/a'.</msg>
+<status status="PASS" endtime="20150430 04:32:43.416" starttime="20150430 04:32:41.059"></status>
+</kw>
+<status status="PASS" endtime="20150430 04:32:43.416" starttime="20150430 04:32:41.058"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150430 04:32:43.438" critical="yes" starttime="20150430 04:32:41.057"></status>
+</test>
+<test id="s1-t3" name="Open pelikurssi">
+<kw type="kw" name="resource.Click pelikurssi">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="Content_Content_ctl00_SubMenuControl_MenuItemRepeater_ctl00_2_MenuItemRepeater_2_link_0"]</arg>
+</arguments>
+<msg timestamp="20150430 04:32:43.443" level="INFO">Clicking element 'xpath=//*[@id="Content_Content_ctl00_SubMenuControl_MenuItemRepeater_ctl00_2_MenuItemRepeater_2_link_0"]'.</msg>
+<status status="PASS" endtime="20150430 04:32:46.497" starttime="20150430 04:32:43.443"></status>
+</kw>
+<status status="PASS" endtime="20150430 04:32:46.497" starttime="20150430 04:32:43.442"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150430 04:32:46.498" critical="yes" starttime="20150430 04:32:43.440"></status>
+</test>
+<test id="s1-t4" name="Close">
+<kw type="kw" name="resource.Close page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150430 04:32:47.862" starttime="20150430 04:32:46.502"></status>
+</kw>
+<status status="PASS" endtime="20150430 04:32:47.862" starttime="20150430 04:32:46.500"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150430 04:32:47.863" critical="yes" starttime="20150430 04:32:46.499"></status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150430 04:32:47.866" starttime="20150430 04:32:47.865"></status>
+</kw>
+<doc>A resource file with reusable keywords and variables.
+This test is functionally identical to the example in
+valid_login.txt file</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150430 04:32:47.866" starttime="20150430 04:31:44.387"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="4" id="s1" name="Journey">Journey</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
